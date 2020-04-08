@@ -550,6 +550,7 @@ article footer .tags:before {
   color: #676767;
   overflow: hidden;
   text-align: center;
+  background-image: url("images/clover.png");
 }
 #footer a {
   color: #676767;
