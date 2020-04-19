@@ -74,24 +74,46 @@
   <header>
     
       <div class="icon"></div>
-      <a href="/2020/04/19/测试/">
-  <time datetime="2020-04-19T12:20:00.000Z">
-    2020-04-19
+      <a href="/2020/04/20/测试/">
+  <time datetime="2020-04-20T12:30:00.000Z">
+    2020-04-20
   </time>
 </a>
     
     
   
-    <h1 class="title"><a href="/2020/04/19/测试/">校对前的文档整理</a></h1>
+    <h1 class="title"><a href="/2020/04/20/测试/">校对前的文档整理</a></h1>
   
 
   </header>
   
   <div class="entry">
     
-      <blockquote>
-<p>我就是拿来测试一下日志部分。<br><em>好像哪里改错了</em></p>
-</blockquote>
+      <p>平时工作中会遇到需要校对文字，校对前就要对文档做些处理。</p>
+<h3 id="1-在word文档里"><a href="#1-在word文档里" class="headerlink" title="1.在word文档里"></a>1.在word文档里</h3><ul>
+<li><p>a.^p^p替换为^p（^p为段落标记，此项操作需要执行多次，直到显示0处替换为止）</p>
+</li>
+<li><p>b.将各种标点符号替换成中文状态下的标点符号，包括英文的括号也要替换。</p>
+</li>
+</ul>
+<h3 id="2-在sigil里"><a href="#2-在sigil里" class="headerlink" title="2.在sigil里"></a>2.在sigil里</h3><ul>
+<li><p>a.清除单独的页码数字</p>
+ <p>\d+</p>
+</li>
+<li><p>b.半角空格替换为空白<br>(<p>.*[^a-z|A-Z]) 这里正则表达式后面接了一个空格</p>
+<p>替换为 \1</p>
+</li>
+<li><p>c.替换断行多的，尾巴没有标点符号的段落<br>(<p>(.*[^\s\p{P}]))</p></p>
+ <p>
+
+<p>替换为 \1</p>
+</li>
+<li><p>d.标题替换</p>
+<p>([〇一二三四五六七八九十]+)</p>  或 <p>(\d+)</p>  或 <p>(第.* ?部)</p>
+
+<p>替换为 <h1>\1</h1></p>
+</li>
+</ul>
 
     
   </div>
