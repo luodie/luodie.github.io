@@ -24,7 +24,7 @@
 <meta property="og:description" content="平时工作中会遇到需要校对文字，校对前就要对文档做些处理。 1.在word文档里 清除所有格式。  ^p^p替换为^p（^p为段落标记，此项操作需要执行多次，直到显示0处替换为止）。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-04-20T12:30:00.000Z">
-<meta property="article:modified_time" content="2020-05-02T07:08:40.566Z">
+<meta property="article:modified_time" content="2020-10-31T04:14:15.918Z">
 <meta property="article:author" content="luodie">
 <meta property="article:tag" content="学习笔记">
 <meta name="twitter:card" content="summary">
@@ -115,6 +115,8 @@
 </li>
 <li><p>标题替换。<br><code>&lt;p&gt;([〇一二三四五六七八九十]+)&lt;/p&gt;</code>  或 <code>&lt;p&gt;(\d+)&lt;/p&gt;</code>  或 <code>&lt;p&gt;(第.* ?部)&lt;/p&gt;</code></p>
 <p>替换为  <code>&lt;h1&gt;\1&lt;/h1&gt;</code></p>
+</li>
+<li><p>查找带有圆圈的序号（方便改注释）。<br><code>[①-⑩]</code>  或 <code>([①-⑩])</code>  </p>
 </li>
 </ul>
 
